@@ -62,26 +62,25 @@
               </p>
               <p
                 id="triangle-given-value-holder"
-                class="font-light text-lg text-gray-600"
+                class="font-light text-lg text-gray-600 hidden"
               >
-                <span id="triangle-given-value" class="pr-1"
-                  >b = 4cm h=6cm
-                </span>
+                <span id="triangle-given-value" class="pr-1"> </span>
                 <i
                   id="triangle-edit-btn"
+                  onclick="editMode('triangle')"
                   class="fa-regular fa-pen-to-square"
                 ></i>
               </p>
               <div id="triangle-input-holder" class="my-5">
                 <input
-                  id="triangle-input-1"
+                  id="triangle-input-b"
                   type="text"
                   placeholder="b"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
                 <input
-                  id="triangle-input-2"
+                  id="triangle-input-h"
                   type="text"
                   placeholder="h"
                   class="input w-[28%] max-w-xs bg-gray-100"
@@ -89,6 +88,7 @@
                 <span class="w-[15%] text-left px-2">cm</span>
                 <button
                   id="triangle-submit-btn"
+                  onclick="inputValidation('triangle','b','h')"
                   class="btn btn-square btn-info w-[14%]"
                 >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
@@ -99,6 +99,9 @@
                 <button
                   id="triangle-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
+                  disabled
+                  
+                  disabled
                 >
                   Calculate
                 </button>
@@ -108,8 +111,12 @@
 
           <!-- Rectangle Card -->
 
-          <div id="rectangle" onmouseenter="randomBgColor(this.id,'random')"
-          onmouseleave="randomBgColor(this.id,'white')" class="card w-full bg-base-100 shadow-xl">
+          <div
+            id="rectangle"
+            onmouseenter="randomBgColor(this.id,'random')"
+            onmouseleave="randomBgColor(this.id,'white')"
+            class="card w-full bg-base-100 shadow-xl"
+          >
             <figure class="px-10 pt-10">
               <img
                 src="./images/rectangle.png"
@@ -159,6 +166,8 @@
                 <button
                   id="rectangle-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
+                  disabled
+                  
                 >
                   Calculate
                 </button>
@@ -168,8 +177,12 @@
 
           <!-- Parallelogram Card -->
 
-          <div id="parallelogram" onmouseenter="randomBgColor(this.id,'random')"
-          onmouseleave="randomBgColor(this.id,'white')" class="card w-full bg-base-100 shadow-xl">
+          <div
+            id="parallelogram"
+            onmouseenter="randomBgColor(this.id,'random')"
+            onmouseleave="randomBgColor(this.id,'white')"
+            class="card w-full bg-base-100 shadow-xl"
+          >
             <figure class="px-10 pt-10">
               <img
                 src="./images/parallelogram.png"
@@ -219,6 +232,8 @@
                 <button
                   id="parallelogram-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
+                  disabled
+                  
                 >
                   Calculate
                 </button>
@@ -228,8 +243,12 @@
 
           <!-- Rhombus Card -->
 
-          <div id="rhombus" onmouseenter="randomBgColor(this.id,'random')"
-          onmouseleave="randomBgColor(this.id,'white')" class="card w-full bg-base-100 shadow-xl">
+          <div
+            id="rhombus"
+            onmouseenter="randomBgColor(this.id,'random')"
+            onmouseleave="randomBgColor(this.id,'white')"
+            class="card w-full bg-base-100 shadow-xl"
+          >
             <figure class="px-10 pt-10">
               <img
                 src="./images/rhombus.png"
@@ -281,6 +300,8 @@
                 <button
                   id="rhombus-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
+                  disabled
+                  
                 >
                   Calculate
                 </button>
@@ -290,8 +311,12 @@
 
           <!-- Pentagon Card -->
 
-          <div id="pentagon" onmouseenter="randomBgColor(this.id,'random')"
-          onmouseleave="randomBgColor(this.id,'white')" class="card w-full bg-base-100 shadow-xl">
+          <div
+            id="pentagon"
+            onmouseenter="randomBgColor(this.id,'random')"
+            onmouseleave="randomBgColor(this.id,'white')"
+            class="card w-full bg-base-100 shadow-xl"
+          >
             <figure class="px-10 pt-10">
               <img
                 src="./images/pentagon.png"
@@ -343,6 +368,8 @@
                 <button
                   id="pentagon-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
+                  disabled
+                  
                 >
                   Calculate
                 </button>
@@ -352,8 +379,12 @@
 
           <!-- Ellipse Card -->
 
-          <div id="ellipse" onmouseenter="randomBgColor(this.id,'random')"
-          onmouseleave="randomBgColor(this.id,'white')"  class="card w-full bg-base-100 shadow-xl">
+          <div
+            id="ellipse"
+            onmouseenter="randomBgColor(this.id,'random')"
+            onmouseleave="randomBgColor(this.id,'white')"
+            class="card w-full bg-base-100 shadow-xl"
+          >
             <figure class="px-10 pt-10">
               <img
                 src="./images/ellipse.png"
@@ -403,6 +434,8 @@
                 <button
                   id="ellipse-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
+                  disabled
+                  
                 >
                   Calculate
                 </button>

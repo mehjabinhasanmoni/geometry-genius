@@ -32,18 +32,22 @@
         <div class="navbar-end">
           <a href="blog.html" class="btn btn-info p-4"> Blog </a>
         </div>
-
       </div>
     </header>
     <main>
       <!-- Card about Geometry -->
       <section class="my-5 p-5 flex flex-col md:flex-row justify-around">
-       
-        <div  class="geometry-cards  w-full lg:w-[70%] gap-5  grid md:grid-cols-3 lg:grid-cols-3 ">
+        <div
+          class="geometry-cards w-full lg:w-[70%] gap-5 grid md:grid-cols-3 lg:grid-cols-3"
+        >
+          <!-- Triangle Card -->
 
-             <!-- Triangle Card -->
-
-          <div id="triangle" class="card w-full bg-base-100 shadow-xl">
+          <div
+            id="triangle"
+            onmouseenter="randomBgColor(this.id,'random')"
+            onmouseleave="randomBgColor(this.id,'white')"
+            class="card w-full bg-base-100 shadow-xl"
+          >
             <figure class="px-10 pt-10">
               <img
                 src="./images/triangle.png"
@@ -56,30 +60,44 @@
               <p class="font-light text-lg text-gray-600">
                 Area (A) = 0.5 X b X h
               </p>
-              <p id="triangle-given-value-holder" class="font-light text-lg text-gray-600">
-                <span id="triangle-given-value" class="pr-1">b = 4cm h=6cm </span>
-                <i id="triangle-edit-btn" class="fa-regular fa-pen-to-square"></i>
+              <p
+                id="triangle-given-value-holder"
+                class="font-light text-lg text-gray-600"
+              >
+                <span id="triangle-given-value" class="pr-1"
+                  >b = 4cm h=6cm
+                </span>
+                <i
+                  id="triangle-edit-btn"
+                  class="fa-regular fa-pen-to-square"
+                ></i>
               </p>
               <div id="triangle-input-holder" class="my-5">
-                <input id="triangle-input-1"
+                <input
+                  id="triangle-input-1"
                   type="text"
                   placeholder="b"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <input id="triangle-input-2"
+                <input
+                  id="triangle-input-2"
                   type="text"
                   placeholder="h"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <button id="triangle-submit-btn" class="btn btn-square btn-info w-[14%]">
+                <button
+                  id="triangle-submit-btn"
+                  class="btn btn-square btn-info w-[14%]"
+                >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
                 </button>
               </div>
 
               <div class="card-actions w-full">
-                <button id="triangle-calculate-btn"
+                <button
+                  id="triangle-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                 >
                   Calculate
@@ -88,9 +106,10 @@
             </div>
           </div>
 
-           <!-- Rectangle Card -->
-             
-           <div id="rectangle" class="card w-full bg-base-100 shadow-xl">
+          <!-- Rectangle Card -->
+
+          <div id="rectangle" onmouseenter="randomBgColor(this.id,'random')"
+          onmouseleave="randomBgColor(this.id,'white')" class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img
                 src="./images/rectangle.png"
@@ -100,33 +119,45 @@
             </figure>
             <div class="card-body items-center text-center p-2 md:p-5 lg:p-5">
               <h2 class="card-title text-3xl text-gray-600">Rectangle</h2>
-              <p class="font-light text-lg text-gray-600">
-                Area (A) =  W X I
-              </p>
-              <p id="rectangle-given-value-holder" class="font-light text-lg text-gray-600">
-                <span id="rectangle-given-value" class="pr-1">w = 4cm i=6cm </span>
-                <i id="rectangle-edit-btn" class="fa-regular fa-pen-to-square"></i>
+              <p class="font-light text-lg text-gray-600">Area (A) = W X I</p>
+              <p
+                id="rectangle-given-value-holder"
+                class="font-light text-lg text-gray-600"
+              >
+                <span id="rectangle-given-value" class="pr-1"
+                  >w = 4cm i=6cm
+                </span>
+                <i
+                  id="rectangle-edit-btn"
+                  class="fa-regular fa-pen-to-square"
+                ></i>
               </p>
               <div id="rectangle-input-holder" class="my-5">
-                <input id="rectangle-input-1"
+                <input
+                  id="rectangle-input-1"
                   type="text"
                   placeholder="W"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <input id="rectangle-input-2"
+                <input
+                  id="rectangle-input-2"
                   type="text"
                   placeholder="I"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <button id="rectangle-submit-btn" class="btn btn-square btn-info w-[14%]">
+                <button
+                  id="rectangle-submit-btn"
+                  class="btn btn-square btn-info w-[14%]"
+                >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
                 </button>
               </div>
 
               <div class="card-actions w-full">
-                <button id="rectangle-calculate-btn"
+                <button
+                  id="rectangle-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                 >
                   Calculate
@@ -135,9 +166,10 @@
             </div>
           </div>
 
-           <!-- Parallelogram Card -->
-             
-           <div id="parallelogram" class="card w-full bg-base-100 shadow-xl">
+          <!-- Parallelogram Card -->
+
+          <div id="parallelogram" onmouseenter="randomBgColor(this.id,'random')"
+          onmouseleave="randomBgColor(this.id,'white')" class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img
                 src="./images/parallelogram.png"
@@ -147,33 +179,45 @@
             </figure>
             <div class="card-body items-center text-center p-2 md:p-5 lg:p-5">
               <h2 class="card-title text-3xl text-gray-600">Parallelogram</h2>
-              <p class="font-light text-lg text-gray-600">
-                Area (A) = b X h
-              </p>
-              <p id="parallelogram-given-value-holder" class="font-light text-lg text-gray-600">
-                <span id="parallelogram-given-value" class="pr-1">b = 10cm h=12cm </span>
-                <i id="parallelogram-edit-btn" class="fa-regular fa-pen-to-square"></i>
+              <p class="font-light text-lg text-gray-600">Area (A) = b X h</p>
+              <p
+                id="parallelogram-given-value-holder"
+                class="font-light text-lg text-gray-600"
+              >
+                <span id="parallelogram-given-value" class="pr-1"
+                  >b = 10cm h=12cm
+                </span>
+                <i
+                  id="parallelogram-edit-btn"
+                  class="fa-regular fa-pen-to-square"
+                ></i>
               </p>
               <div id="parallelogram-input-holder" class="my-5">
-                <input id="parallelogram-input-1"
+                <input
+                  id="parallelogram-input-1"
                   type="text"
                   placeholder="b"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <input id="parallelogram-input-2"
+                <input
+                  id="parallelogram-input-2"
                   type="text"
                   placeholder="h"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <button id="parallelogram-submit-btn" class="btn btn-square btn-info w-[14%]">
+                <button
+                  id="parallelogram-submit-btn"
+                  class="btn btn-square btn-info w-[14%]"
+                >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
                 </button>
               </div>
 
               <div class="card-actions w-full">
-                <button id="parallelogram-calculate-btn"
+                <button
+                  id="parallelogram-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                 >
                   Calculate
@@ -182,9 +226,10 @@
             </div>
           </div>
 
-           <!-- Rhombus Card -->
-             
-           <div id="rhombus" class="card w-full bg-base-100 shadow-xl">
+          <!-- Rhombus Card -->
+
+          <div id="rhombus" onmouseenter="randomBgColor(this.id,'random')"
+          onmouseleave="randomBgColor(this.id,'white')" class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img
                 src="./images/rhombus.png"
@@ -197,30 +242,44 @@
               <p class="font-light text-lg text-gray-600">
                 Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub>
               </p>
-              <p id="rhombus-given-value-holder" class="font-light text-lg text-gray-600">
-                <span id="rhombus-given-value" class="pr-1">d<sub>1</sub> = 16cm d<sub>2</sub>=8cm </span>
-                <i id="rhombus-edit-btn" class="fa-regular fa-pen-to-square"></i>
+              <p
+                id="rhombus-given-value-holder"
+                class="font-light text-lg text-gray-600"
+              >
+                <span id="rhombus-given-value" class="pr-1"
+                  >d<sub>1</sub> = 16cm d<sub>2</sub>=8cm
+                </span>
+                <i
+                  id="rhombus-edit-btn"
+                  class="fa-regular fa-pen-to-square"
+                ></i>
               </p>
               <div id="rhombus-input-holder" class="my-5">
-                <input id="rhombus-input-1"
+                <input
+                  id="rhombus-input-1"
                   type="text"
                   placeholder="d1"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <input id="rhombus-input-2"
+                <input
+                  id="rhombus-input-2"
                   type="text"
                   placeholder="d2"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <button id="rhombus-submit-btn" class="btn btn-square btn-info w-[14%]">
+                <button
+                  id="rhombus-submit-btn"
+                  class="btn btn-square btn-info w-[14%]"
+                >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
                 </button>
               </div>
 
               <div class="card-actions w-full">
-                <button id="rhombus-calculate-btn"
+                <button
+                  id="rhombus-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                 >
                   Calculate
@@ -229,9 +288,10 @@
             </div>
           </div>
 
-           <!-- Pentagon Card -->
-             
-           <div id="pentagon" class="card w-full bg-base-100 shadow-xl">
+          <!-- Pentagon Card -->
+
+          <div id="pentagon" onmouseenter="randomBgColor(this.id,'random')"
+          onmouseleave="randomBgColor(this.id,'white')" class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img
                 src="./images/pentagon.png"
@@ -244,30 +304,44 @@
               <p class="font-light text-lg text-gray-600">
                 Area (A) = 0.5 X p X b
               </p>
-              <p id="pentagon-given-value-holder" class="font-light text-lg text-gray-600">
-                <span id="pentagon-given-value" class="pr-1">p = 6cm b=10cm </span>
-                <i id="pentagon-edit-btn" class="fa-regular fa-pen-to-square"></i>
+              <p
+                id="pentagon-given-value-holder"
+                class="font-light text-lg text-gray-600"
+              >
+                <span id="pentagon-given-value" class="pr-1"
+                  >p = 6cm b=10cm
+                </span>
+                <i
+                  id="pentagon-edit-btn"
+                  class="fa-regular fa-pen-to-square"
+                ></i>
               </p>
               <div id="pentagon-input-holder" class="my-5">
-                <input id="pentagon-input-1"
+                <input
+                  id="pentagon-input-1"
                   type="text"
                   placeholder="p"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <input id="pentagon-input-2"
+                <input
+                  id="pentagon-input-2"
                   type="text"
                   placeholder="b"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
-                <button id="pentagon-submit-btn" class="btn btn-square btn-info w-[14%]">
+                <button
+                  id="pentagon-submit-btn"
+                  class="btn btn-square btn-info w-[14%]"
+                >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
                 </button>
               </div>
 
               <div class="card-actions w-full">
-                <button id="pentagon-calculate-btn"
+                <button
+                  id="pentagon-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                 >
                   Calculate
@@ -276,97 +350,109 @@
             </div>
           </div>
 
-             <!-- Ellipse Card -->
-             
-             <div id="ellipse" class="card w-full bg-base-100 shadow-xl">
-                <figure class="px-10 pt-10">
-                  <img
-                    src="./images/ellipse.png"
-                    alt="ellipse"
-                    class="rounded-xl"
-                  />
-                </figure>
-                <div class="card-body items-center text-center p-2 md:p-5 lg:p-5">
-                  <h2 class="card-title text-3xl text-gray-600">Ellipse</h2>
-                  <p class="font-light text-lg text-gray-600">
-                    Area (A) = &pi;ab
-                  </p>
-                  <p id="ellipse-given-value-holder" class="font-light text-lg text-gray-600">
-                    <span id="ellipse-given-value" class="pr-1">a = 6cm b=10cm </span>
-                    <i id="ellipse-edit-btn" class="fa-regular fa-pen-to-square"></i>
-                  </p>
-                  <div id="ellipse-input-holder" class="my-5">
-                    <input id="ellipse-input-1"
-                      type="text"
-                      placeholder="a"
-                      class="input w-[28%] max-w-xs bg-gray-100"
-                    />
-                    <span class="w-[15%] text-left px-2">cm</span>
-                    <input id="ellipse-input-2"
-                      type="text"
-                      placeholder="b"
-                      class="input w-[28%] max-w-xs bg-gray-100"
-                    />
-                    <span class="w-[15%] text-left px-2">cm</span>
-                    <button id="ellipse-submit-btn" class="btn btn-square btn-info w-[14%]">
-                      <i class="fa-solid fa-check fa-xl text-white"></i>
-                    </button>
-                  </div>
-    
-                  <div class="card-actions w-full">
-                    <button id="ellipse-calculate-btn"
-                      class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
-                    >
-                      Calculate
-                    </button>
-                  </div>
-                </div>
+          <!-- Ellipse Card -->
+
+          <div id="ellipse" onmouseenter="randomBgColor(this.id,'random')"
+          onmouseleave="randomBgColor(this.id,'white')"  class="card w-full bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="./images/ellipse.png"
+                alt="ellipse"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body items-center text-center p-2 md:p-5 lg:p-5">
+              <h2 class="card-title text-3xl text-gray-600">Ellipse</h2>
+              <p class="font-light text-lg text-gray-600">Area (A) = &pi;ab</p>
+              <p
+                id="ellipse-given-value-holder"
+                class="font-light text-lg text-gray-600"
+              >
+                <span id="ellipse-given-value" class="pr-1"
+                  >a = 6cm b=10cm
+                </span>
+                <i
+                  id="ellipse-edit-btn"
+                  class="fa-regular fa-pen-to-square"
+                ></i>
+              </p>
+              <div id="ellipse-input-holder" class="my-5">
+                <input
+                  id="ellipse-input-1"
+                  type="text"
+                  placeholder="a"
+                  class="input w-[28%] max-w-xs bg-gray-100"
+                />
+                <span class="w-[15%] text-left px-2">cm</span>
+                <input
+                  id="ellipse-input-2"
+                  type="text"
+                  placeholder="b"
+                  class="input w-[28%] max-w-xs bg-gray-100"
+                />
+                <span class="w-[15%] text-left px-2">cm</span>
+                <button
+                  id="ellipse-submit-btn"
+                  class="btn btn-square btn-info w-[14%]"
+                >
+                  <i class="fa-solid fa-check fa-xl text-white"></i>
+                </button>
               </div>
 
+              <div class="card-actions w-full">
+                <button
+                  id="ellipse-calculate-btn"
+                  class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        
-
-        <div class="geometry-calculation bg-sky-200 w-full lg:w-[25%] ">
-            <div class="overflow-x-auto">
-                <table class="table w-full">
-                  <!-- head -->
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Name</th>
-                      <th>Job</th>
-                      <th>Favorite Color</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- row 1 -->
-                    <tr>
-                      <th>1</th>
-                      <td>Cy Ganderton</td>
-                      <td>Quality Control Specialist</td>
-                      <td>Blue</td>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr>
-                      <th>2</th>
-                      <td>Hart Hagerty</td>
-                      <td>Desktop Support Technician</td>
-                      <td>Purple</td>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
-                      <th>3</th>
-                      <td>Brice Swyre</td>
-                      <td>Tax Accountant</td>
-                      <td>Red</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+        <div class="geometry-calculation bg-sky-200 w-full lg:w-[25%]">
+          <div class="overflow-x-auto">
+            <table class="table w-full">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Job</th>
+                  <th>Favorite Color</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr>
+                  <th>1</th>
+                  <td>Cy Ganderton</td>
+                  <td>Quality Control Specialist</td>
+                  <td>Blue</td>
+                </tr>
+                <!-- row 2 -->
+                <tr>
+                  <th>2</th>
+                  <td>Hart Hagerty</td>
+                  <td>Desktop Support Technician</td>
+                  <td>Purple</td>
+                </tr>
+                <!-- row 3 -->
+                <tr>
+                  <th>3</th>
+                  <td>Brice Swyre</td>
+                  <td>Tax Accountant</td>
+                  <td>Red</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>
     <footer></footer>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

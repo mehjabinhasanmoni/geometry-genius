@@ -38,7 +38,7 @@
       <!-- Card about Geometry -->
       <section class="my-5 p-5 flex flex-col md:flex-row justify-around">
         <div
-          class="geometry-cards w-full lg:w-[70%] gap-5 grid md:grid-cols-3 lg:grid-cols-3"
+          class="geometry-cards w-full lg:w-[70%] gap-5 grid md:grid-cols-3 lg:grid-cols-3 "
         >
           <!-- Triangle Card -->
 
@@ -46,7 +46,7 @@
             id="triangle"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl"
+            class="card w-full bg-base-100 shadow-xl border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -114,7 +114,7 @@
             id="rectangle"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl"
+            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -180,7 +180,7 @@
             id="parallelogram"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl"
+            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -246,7 +246,7 @@
             id="rhombus"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl"
+            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -314,7 +314,7 @@
             id="pentagon"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl"
+            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -382,7 +382,7 @@
             id="ellipse"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl"
+            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -443,40 +443,25 @@
           </div>
         </div>
 
-        <div class="geometry-calculation bg-sky-200 w-full lg:w-[25%]">
-          <div class="overflow-x-auto">
+        <div class="geometry-calculation w-full lg:w-[25%]">
+          <div class="overflow-x-auto bg-white  border border-gray-400 rounded-2xl py-3">
+            <h1 class="text-2xl text-center underline">Area Calculation</h1>
             <table class="table w-full">
-              <!-- head -->
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Name</th>
-                  <th>Job</th>
-                  <th>Favorite Color</th>
-                </tr>
-              </thead>
-              <tbody>
+        
+              <tbody id="area-calculation-holder">
                 <!-- row 1 -->
-                <tr>
+                <!-- <tr>
                   <th>1</th>
-                  <td>Cy Ganderton</td>
-                  <td>Quality Control Specialist</td>
-                  <td>Blue</td>
+                  <td>Triangle</td>
+                  <td>12CM <sup>2</sup></td>
+                  <td>
+                    <button class="btn btn-info">Convert tom m<sup>2</sup></button>
+                    <button class="btn btn-error btn-square">
+                      <i class="fa-solid fa-close text-white"></i>
+                    </button>
+                    </td>
                 </tr>
-                <!-- row 2 -->
-                <tr>
-                  <th>2</th>
-                  <td>Hart Hagerty</td>
-                  <td>Desktop Support Technician</td>
-                  <td>Purple</td>
-                </tr>
-                <!-- row 3 -->
-                <tr>
-                  <th>3</th>
-                  <td>Brice Swyre</td>
-                  <td>Tax Accountant</td>
-                  <td>Red</td>
-                </tr>
+                -->
               </tbody>
             </table>
           </div>

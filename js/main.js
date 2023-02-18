@@ -104,6 +104,22 @@ function multiplyValues(id,label1,label2,constValue) {
             `${id}-input-${label2}`
           ).value;
         const result=(parseFloat(inputValueString1)*parseFloat(inputValueString2)*constValue).toFixed(2);
+// Insert tr in table
+        const container = document.getElementById('area-calculation-holder');
+      let childElementCount = document.getElementById('area-calculation-holder').childElementCount;
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+      <td>${childElementCount+1}</td>
+      <td class="capitalize">${id}</td>
+      <td>${result}CM <sup>2</sup></td>
+      <td>
+          <button class="btn btn-info">Convert tom m<sup>2</sup></button>
+          <button class="btn btn-error btn-square">
+            <i class="fa-solid fa-close text-white"></i>
+          </button>
+      </td>`;
+      container.appendChild(tr); 
+
         console.log(label1,label2,constValue,result);
     }else{
         console.log("nothing");

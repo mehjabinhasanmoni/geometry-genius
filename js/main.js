@@ -87,6 +87,28 @@ function editMode(id) {
   document.getElementById(`${id}-calculate-btn`).disabled = true;
 }
 
+// Append Into Table
+// It takes result and created for reusable
+function createRow(id, result) {
+  // Insert tr in table
+  const container = document.getElementById("area-calculation-holder");
+  let childElementCount = document.getElementById(
+    "area-calculation-holder"
+  ).childElementCount;
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+      <td>${childElementCount + 1}</td>
+      <td class="capitalize">${id}</td>
+      <td><spanm class="result">${result}</spanm>CM <sup>2</sup></td>
+      <td>
+          <button class="btn btn-info convert">Convert tom m<sup>2</sup></button>
+          <button class="btn btn-error btn-square remove">
+            <i class="fa-solid fa-close text-white"></i>
+          </button>
+      </td>`;
+  container.appendChild(tr);
+}
+
 /* 
 -Multiply Function for 
 -one Constant value and
@@ -108,24 +130,33 @@ function multiplyValues(id, label1, label2, constValue) {
       parseFloat(inputValueString2) *
       constValue
     ).toFixed(2);
-    // Insert tr in table
-    const container = document.getElementById("area-calculation-holder");
-    let childElementCount = document.getElementById(
-      "area-calculation-holder"
-    ).childElementCount;
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${childElementCount + 1}</td>
-      <td class="capitalize">${id}</td>
-      <td><spanm class="result">${result}</spanm>CM <sup>2</sup></td>
-      <td>
-          <button class="btn btn-info convert">Convert tom m<sup>2</sup></button>
-          <button class="btn btn-error btn-square remove">
-            <i class="fa-solid fa-close text-white"></i>
-          </button>
-      </td>`;
-    container.appendChild(tr);
+    // Called reusable Function
+    createRow(id, result);
+  } else {
+    console.log("nothing");
+  }
+}
 
+/* 
+-Multiply Function for 
+-Two Input values from input field
+-Id prefix for reuse
+-Getting First label in label1
+-Getting Second label in label2
+*/
+function multiplyValuesWithoutConst(id, label1, label2) {
+  if (inputValidation(id, label1, label2)) {
+    const inputValueString1 = document.getElementById(
+      `${id}-input-${label1}`
+    ).value;
+    const inputValueString2 = document.getElementById(
+      `${id}-input-${label2}`
+    ).value;
+    const result = (
+      parseFloat(inputValueString1) * parseFloat(inputValueString2)
+    ).toFixed(2);
+    // Called reusable Function
+    createRow(id, result);
   } else {
     console.log("nothing");
   }
@@ -138,7 +169,7 @@ tbody.addEventListener("click", (event) => {
   // Check if the clicked element is the "Convert to M²" button
   if (event.target.classList.contains("convert")) {
     const result = tr.querySelector(".result");
-    const resultInMeters = (parseFloat(result.textContent) / 100).toFixed(2); // convert from cm² to m²
+    const resultInMeters = parseFloat(result.textContent) / 10000; // convert from cm² to m²
     event.target.textContent = `${resultInMeters} M²`;
   }
 

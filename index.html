@@ -128,26 +128,27 @@
               <p class="font-light text-lg text-gray-600">Area (A) = W X I</p>
               <p
                 id="rectangle-given-value-holder"
-                class="font-light text-lg text-gray-600"
+                class="font-light text-lg text-gray-600 hidden"
               >
                 <span id="rectangle-given-value" class="pr-1"
                   >w = 4cm i=6cm
                 </span>
                 <i
                   id="rectangle-edit-btn"
+                  onclick="editMode('rectangle')"
                   class="fa-regular fa-pen-to-square"
                 ></i>
               </p>
               <div id="rectangle-input-holder" class="my-5">
                 <input
-                  id="rectangle-input-1"
+                  id="rectangle-input-w"
                   type="text"
                   placeholder="W"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
                 <input
-                  id="rectangle-input-2"
+                  id="rectangle-input-i"
                   type="text"
                   placeholder="I"
                   class="input w-[28%] max-w-xs bg-gray-100"
@@ -155,6 +156,7 @@
                 <span class="w-[15%] text-left px-2">cm</span>
                 <button
                   id="rectangle-submit-btn"
+                  onclick="inputValidation('rectangle','w','i')"
                   class="btn btn-square btn-info w-[14%]"
                 >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
@@ -166,6 +168,7 @@
                   id="rectangle-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
+                  onclick="multiplyValuesWithoutConst('rectangle','w','i')"
                   
                 >
                   Calculate
@@ -194,26 +197,28 @@
               <p class="font-light text-lg text-gray-600">Area (A) = b X h</p>
               <p
                 id="parallelogram-given-value-holder"
-                class="font-light text-lg text-gray-600"
+                class="font-light text-lg text-gray-600 hidden"
               >
                 <span id="parallelogram-given-value" class="pr-1"
                   >b = 10cm h=12cm
                 </span>
                 <i
                   id="parallelogram-edit-btn"
+                  onclick="editMode('parallelogram')"
+
                   class="fa-regular fa-pen-to-square"
                 ></i>
               </p>
               <div id="parallelogram-input-holder" class="my-5">
                 <input
-                  id="parallelogram-input-1"
+                  id="parallelogram-input-b"
                   type="text"
                   placeholder="b"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
                 <input
-                  id="parallelogram-input-2"
+                  id="parallelogram-input-h"
                   type="text"
                   placeholder="h"
                   class="input w-[28%] max-w-xs bg-gray-100"
@@ -221,6 +226,7 @@
                 <span class="w-[15%] text-left px-2">cm</span>
                 <button
                   id="parallelogram-submit-btn"
+                  onclick="inputValidation('parallelogram','b','h')"
                   class="btn btn-square btn-info w-[14%]"
                 >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
@@ -232,6 +238,7 @@
                   id="parallelogram-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
+                  onclick="multiplyValuesWithoutConst('parallelogram','b','h')"
                   
                 >
                   Calculate
@@ -262,26 +269,27 @@
               </p>
               <p
                 id="rhombus-given-value-holder"
-                class="font-light text-lg text-gray-600"
+                class="font-light text-lg text-gray-600 hidden"
               >
                 <span id="rhombus-given-value" class="pr-1"
                   >d<sub>1</sub> = 16cm d<sub>2</sub>=8cm
                 </span>
                 <i
                   id="rhombus-edit-btn"
+                  onclick="editMode('rhombus')"
                   class="fa-regular fa-pen-to-square"
                 ></i>
               </p>
               <div id="rhombus-input-holder" class="my-5">
                 <input
-                  id="rhombus-input-1"
+                  id="rhombus-input-d1"
                   type="text"
                   placeholder="d1"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
                 <input
-                  id="rhombus-input-2"
+                  id="rhombus-input-d2"
                   type="text"
                   placeholder="d2"
                   class="input w-[28%] max-w-xs bg-gray-100"
@@ -289,6 +297,7 @@
                 <span class="w-[15%] text-left px-2">cm</span>
                 <button
                   id="rhombus-submit-btn"
+                  onclick="inputValidation('rhombus','d1','d2')"
                   class="btn btn-square btn-info w-[14%]"
                 >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
@@ -300,6 +309,7 @@
                   id="rhombus-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
+                  onclick="multiplyValues('rhombus','d1','d2',0.5)"
                   
                 >
                   Calculate
@@ -330,26 +340,27 @@
               </p>
               <p
                 id="pentagon-given-value-holder"
-                class="font-light text-lg text-gray-600"
+                class="font-light text-lg text-gray-600 hidden"
               >
                 <span id="pentagon-given-value" class="pr-1"
                   >p = 6cm b=10cm
                 </span>
                 <i
                   id="pentagon-edit-btn"
+                  onclick="editMode('pentagon')"
                   class="fa-regular fa-pen-to-square"
                 ></i>
               </p>
               <div id="pentagon-input-holder" class="my-5">
                 <input
-                  id="pentagon-input-1"
+                  id="pentagon-input-p"
                   type="text"
                   placeholder="p"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
                 <input
-                  id="pentagon-input-2"
+                  id="pentagon-input-b"
                   type="text"
                   placeholder="b"
                   class="input w-[28%] max-w-xs bg-gray-100"
@@ -357,6 +368,7 @@
                 <span class="w-[15%] text-left px-2">cm</span>
                 <button
                   id="pentagon-submit-btn"
+                  onclick="inputValidation('pentagon','p','b')"
                   class="btn btn-square btn-info w-[14%]"
                 >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
@@ -368,6 +380,7 @@
                   id="pentagon-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
+                  onclick="multiplyValues('pentagon','p','b',0.5)"
                   
                 >
                   Calculate
@@ -396,26 +409,27 @@
               <p class="font-light text-lg text-gray-600">Area (A) = &pi;ab</p>
               <p
                 id="ellipse-given-value-holder"
-                class="font-light text-lg text-gray-600"
+                class="font-light text-lg text-gray-600 hidden"
               >
                 <span id="ellipse-given-value" class="pr-1"
-                  >a = 6cm b=10cm
+                  >
                 </span>
                 <i
                   id="ellipse-edit-btn"
+                  onclick="editMode('ellipse')"
                   class="fa-regular fa-pen-to-square"
                 ></i>
               </p>
               <div id="ellipse-input-holder" class="my-5">
                 <input
-                  id="ellipse-input-1"
+                  id="ellipse-input-a"
                   type="text"
                   placeholder="a"
                   class="input w-[28%] max-w-xs bg-gray-100"
                 />
                 <span class="w-[15%] text-left px-2">cm</span>
                 <input
-                  id="ellipse-input-2"
+                  id="ellipse-input-b"
                   type="text"
                   placeholder="b"
                   class="input w-[28%] max-w-xs bg-gray-100"
@@ -423,6 +437,7 @@
                 <span class="w-[15%] text-left px-2">cm</span>
                 <button
                   id="ellipse-submit-btn"
+                  onclick="inputValidation('ellipse','a','b')"
                   class="btn btn-square btn-info w-[14%]"
                 >
                   <i class="fa-solid fa-check fa-xl text-white"></i>
@@ -434,6 +449,7 @@
                   id="ellipse-calculate-btn"
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
+                  onclick="multiplyValues('ellipse','a','b',Math.PI)"
                   
                 >
                   Calculate

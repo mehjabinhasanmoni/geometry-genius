@@ -38,10 +38,9 @@
       <!-- Card about Geometry -->
       <section class="my-5 p-5 flex flex-col md:flex-row justify-around">
         <div
-          class="geometry-cards w-full lg:w-[70%] gap-5 grid md:grid-cols-3 lg:grid-cols-3 "
+          class="geometry-cards w-full lg:w-[70%] gap-5 grid md:grid-cols-3 lg:grid-cols-3"
         >
           <!-- Triangle Card -->
-
           <div
             id="triangle"
             onmouseenter="randomBgColor(this.id,'random')"
@@ -109,12 +108,11 @@
           </div>
 
           <!-- Rectangle Card -->
-
           <div
             id="rectangle"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
+            class="card w-full bg-base-100 shadow-xl border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -169,7 +167,6 @@
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
                   onclick="multiplyValuesWithoutConst('rectangle','w','i')"
-                  
                 >
                   Calculate
                 </button>
@@ -178,12 +175,11 @@
           </div>
 
           <!-- Parallelogram Card -->
-
           <div
             id="parallelogram"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
+            class="card w-full bg-base-100 shadow-xl border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -205,7 +201,6 @@
                 <i
                   id="parallelogram-edit-btn"
                   onclick="editMode('parallelogram')"
-
                   class="fa-regular fa-pen-to-square"
                 ></i>
               </p>
@@ -239,7 +234,6 @@
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
                   onclick="multiplyValuesWithoutConst('parallelogram','b','h')"
-                  
                 >
                   Calculate
                 </button>
@@ -248,12 +242,11 @@
           </div>
 
           <!-- Rhombus Card -->
-
           <div
             id="rhombus"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
+            class="card w-full bg-base-100 shadow-xl border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -310,7 +303,6 @@
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
                   onclick="multiplyValues('rhombus','d1','d2',0.5)"
-                  
                 >
                   Calculate
                 </button>
@@ -319,12 +311,11 @@
           </div>
 
           <!-- Pentagon Card -->
-
           <div
             id="pentagon"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
+            class="card w-full bg-base-100 shadow-xl border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -381,7 +372,6 @@
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
                   onclick="multiplyValues('pentagon','p','b',0.5)"
-                  
                 >
                   Calculate
                 </button>
@@ -390,12 +380,11 @@
           </div>
 
           <!-- Ellipse Card -->
-
           <div
             id="ellipse"
             onmouseenter="randomBgColor(this.id,'random')"
             onmouseleave="randomBgColor(this.id,'white')"
-            class="card w-full bg-base-100 shadow-xl  border border-gray-400"
+            class="card w-full bg-base-100 shadow-xl border border-gray-400"
           >
             <figure class="px-10 pt-10">
               <img
@@ -411,9 +400,7 @@
                 id="ellipse-given-value-holder"
                 class="font-light text-lg text-gray-600 hidden"
               >
-                <span id="ellipse-given-value" class="pr-1"
-                  >
-                </span>
+                <span id="ellipse-given-value" class="pr-1"> </span>
                 <i
                   id="ellipse-edit-btn"
                   onclick="editMode('ellipse')"
@@ -450,7 +437,6 @@
                   class="btn btn-info btn-calculate w-full text-xl text-white normal-case"
                   disabled
                   onclick="multiplyValues('ellipse','a','b',Math.PI)"
-                  
                 >
                   Calculate
                 </button>
@@ -459,32 +445,19 @@
           </div>
         </div>
 
+        <!-- Area Calculator Rightside -->
         <div class="geometry-calculation w-full lg:w-[25%]">
-          <div class="overflow-x-auto bg-white  border border-gray-400 rounded-2xl py-3">
+          <div
+            class="overflow-x-auto bg-white border border-gray-400 rounded-2xl py-3"
+          >
             <h1 class="text-2xl text-center underline">Area Calculation</h1>
             <table class="table w-full">
-        
-              <tbody id="area-calculation-holder">
-                <!-- row 1 -->
-                <!-- <tr>
-                  <th>1</th>
-                  <td>Triangle</td>
-                  <td>12CM <sup>2</sup></td>
-                  <td>
-                    <button class="btn btn-info">Convert tom m<sup>2</sup></button>
-                    <button class="btn btn-error btn-square">
-                      <i class="fa-solid fa-close text-white"></i>
-                    </button>
-                    </td>
-                </tr>
-                -->
-              </tbody>
+              <tbody id="area-calculation-holder"></tbody>
             </table>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
 
     <script src="./js/main.js"></script>
   </body>

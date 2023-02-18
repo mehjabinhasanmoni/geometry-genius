@@ -101,7 +101,7 @@ function createRow(id, result) {
       <td class="capitalize">${id}</td>
       <td><spanm class="result">${result}</spanm>CM <sup>2</sup></td>
       <td>
-          <button class="btn btn-info convert">Convert tom m<sup>2</sup></button>
+          <button class="btn btn-info convert">Convert to M<sup>2</sup></button>
           <button class="btn btn-error btn-square remove">
             <i class="fa-solid fa-close text-white"></i>
           </button>

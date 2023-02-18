@@ -95,33 +95,55 @@ function editMode(id) {
 -Getting First label in label1
 -Getting Second label in label2
 */
-function multiplyValues(id,label1,label2,constValue) {
-    if(inputValidation(id, label1, label2)){
-        const inputValueString1 = document.getElementById(
-            `${id}-input-${label1}`
-          ).value;
-          const inputValueString2 = document.getElementById(
-            `${id}-input-${label2}`
-          ).value;
-        const result=(parseFloat(inputValueString1)*parseFloat(inputValueString2)*constValue).toFixed(2);
-// Insert tr in table
-        const container = document.getElementById('area-calculation-holder');
-      let childElementCount = document.getElementById('area-calculation-holder').childElementCount;
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-      <td>${childElementCount+1}</td>
+function multiplyValues(id, label1, label2, constValue) {
+  if (inputValidation(id, label1, label2)) {
+    const inputValueString1 = document.getElementById(
+      `${id}-input-${label1}`
+    ).value;
+    const inputValueString2 = document.getElementById(
+      `${id}-input-${label2}`
+    ).value;
+    const result = (
+      parseFloat(inputValueString1) *
+      parseFloat(inputValueString2) *
+      constValue
+    ).toFixed(2);
+    // Insert tr in table
+    const container = document.getElementById("area-calculation-holder");
+    let childElementCount = document.getElementById(
+      "area-calculation-holder"
+    ).childElementCount;
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${childElementCount + 1}</td>
       <td class="capitalize">${id}</td>
-      <td>${result}CM <sup>2</sup></td>
+      <td><spanm class="result">${result}</spanm>CM <sup>2</sup></td>
       <td>
-          <button class="btn btn-info">Convert tom m<sup>2</sup></button>
-          <button class="btn btn-error btn-square">
+          <button class="btn btn-info convert">Convert tom m<sup>2</sup></button>
+          <button class="btn btn-error btn-square remove">
             <i class="fa-solid fa-close text-white"></i>
           </button>
       </td>`;
-      container.appendChild(tr); 
+    container.appendChild(tr);
 
-        console.log(label1,label2,constValue,result);
-    }else{
-        console.log("nothing");
-    }
+  } else {
+    console.log("nothing");
+  }
 }
+
+// Event Handler for Table row events using event bubbole
+const tbody = document.getElementById("area-calculation-holder");
+tbody.addEventListener("click", (event) => {
+  const tr = event.target.parentNode.parentNode;
+  // Check if the clicked element is the "Convert to M²" button
+  if (event.target.classList.contains("convert")) {
+    const result = tr.querySelector(".result");
+    const resultInMeters = (parseFloat(result.textContent) / 100).toFixed(2); // convert from cm² to m²
+    event.target.textContent = `${resultInMeters} M²`;
+  }
+
+  // Check if the clicked element is the "btn-square" button
+  if (event.target.classList.contains("remove")) {
+    tr.remove();
+  }
+});
